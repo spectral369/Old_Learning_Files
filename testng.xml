@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" thread-count="1"
+	preserve-order="true">
+	<!--  <listeners>
+		<listener class-name="selenium1.List"></listener>
+	</listeners>-->
+	
+	
+	<test name="CrossTestChrome" thread-count="1">
+	<parameter name="browser" value="Chrome"/>
+		<classes>
+			<class name="testCross.CrossFull" />
+		</classes>
+	</test> 
+
+<test name="CrossTestFF" thread-count="1">
+		<parameter name="browser" value="FF" />
+		<classes>
+			<class name="testCross.CrossFull" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
